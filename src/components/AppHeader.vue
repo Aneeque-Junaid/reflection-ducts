@@ -68,12 +68,12 @@
             <MessageCircle class="w-5 h-5" />
           </a>
           <a 
-            href="https://instagram.com/reflectionducts" 
+            href="https://www.facebook.com/Info.reflectionducts" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+            class="text-blue-400 hover:text-blue-300 transition-colors duration-200"
           >
-            <Instagram class="w-5 h-5" />
+            <Facebook class="w-5 h-5" />
           </a>
         </div>
 
@@ -155,12 +155,12 @@
                 <MessageCircle class="w-5 h-5" />
               </a>
               <a 
-                href="https://instagram.com/reflectionducts" 
+                href="https://www.facebook.com/Info.reflectionducts" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+                class="text-blue-400 hover:text-blue-300 transition-colors duration-200"
               >
-                <Instagram class="w-5 h-5" />
+                <Facebook class="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -172,7 +172,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Phone, MessageCircle, Instagram, Menu, X } from 'lucide-vue-next'
+import { Phone, MessageCircle, Facebook, Menu, X } from 'lucide-vue-next'
 
 const isMobileMenuOpen = ref(false)
 

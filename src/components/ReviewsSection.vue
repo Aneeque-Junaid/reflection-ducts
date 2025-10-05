@@ -74,13 +74,13 @@
         <p class="text-gray-600 mb-6">Follow us on social media for more customer stories and updates</p>
         <div class="flex justify-center space-x-6">
           <a 
-            href="https://instagram.com/reflectionducts" 
+            href="https://www.facebook.com/Info.reflectionducts" 
             target="_blank" 
             rel="noopener noreferrer"
             class="flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-shadow duration-300"
           >
-            <Instagram class="w-5 h-5 mr-2" />
-            Follow on Instagram
+            <Facebook class="w-5 h-5 mr-2" />
+            Follow on Facebook
           </a>
           <a 
             href="https://wa.me/16474777772" 
@@ -98,7 +98,7 @@
 </template>
 
 <script setup lang="ts">
-import { Star, Instagram, MessageCircle } from 'lucide-vue-next'
+import { Star, MessageCircle, Facebook } from 'lucide-vue-next'
 
 const reviews = [
   {

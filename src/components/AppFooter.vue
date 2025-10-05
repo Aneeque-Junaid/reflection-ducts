@@ -21,12 +21,12 @@
               <MessageCircle class="w-6 h-6" />
             </a>
             <a 
-              href="https://instagram.com/reflectionducts" 
+              href="https://www.facebook.com/Info.reflectionducts" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+              class="text-blue-400 hover:text-blue-300 transition-colors duration-200"
             >
-              <Instagram class="w-6 h-6" />
+              <Facebook class="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -135,6 +135,6 @@
 </template>
 
 <script setup lang="ts">
-import { Phone, Mail, MapPin, MessageCircle, Instagram } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, MessageCircle, Facebook } from 'lucide-vue-next'
 </script>
 

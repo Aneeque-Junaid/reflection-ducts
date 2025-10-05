@@ -66,19 +66,19 @@
           
           <!-- Social Media -->
           <div class="flex items-start">
-            <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
-              <Instagram class="w-6 h-6 text-white" />
+            <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+              <Facebook class="w-6 h-6 text-white" />
             </div>
             <div>
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Follow Us</h3>
               <div class="flex space-x-4">
                 <a 
-                  href="https://instagram.com/reflectionducts" 
+                  href="https://www.facebook.com/Info.reflectionducts" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  class="flex items-center text-pink-600 hover:text-pink-700 transition-colors duration-200"
+                  class="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                 >
-                  <Instagram class="w-5 h-5 mr-2" />
+                  <Facebook class="w-5 h-5 mr-2" />
                   @reflectionducts
                 </a>
                 <a 
@@ -165,7 +165,7 @@
       <!-- Emergency Service Banner -->
       <div class="mt-12 bg-red-50 border border-red-200 rounded-xl p-6">
         <div class="flex items-center justify-center">
-          <AlertCircle class="w-6 h-6 text-red-600 mr-3" />
+          <!-- <AlertCircle class="w-6 h-6 text-red-600 mr-3" /> -->
           <div class="text-center">
             <h3 class="text-lg font-semibold text-red-800">Emergency Duct Cleaning Service</h3>
             <p class="text-red-700">
@@ -186,7 +186,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import { Phone, Mail, MapPin, Instagram, MessageCircle, AlertCircle } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, Facebook, MessageCircle, AlertCircle } from 'lucide-vue-next'
 
 const quickForm = reactive({
   name: '',

@@ -9,7 +9,10 @@
     <!-- Service Process Section -->
     <ServiceProcess />
     
-    <!-- Pricing & Offers Section -->
+    <!-- Pricing Section -->
+    <PricingList />
+
+    <!-- Packages & Deals Section -->
     <PricingOffers />
     
     <!-- Before & After Gallery -->
@@ -31,4 +34,5 @@ import PricingOffers from '../components/PricingOffers.vue'
 import BeforeAfterGallery from '../components/BeforeAfterGallery.vue'
 import ReviewsSection from '../components/ReviewsSection.vue'
 import ContactSection from '../components/ContactSection.vue'
+import PricingList from './PricingList.vue'
 </script>
