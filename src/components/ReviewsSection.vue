@@ -83,7 +83,7 @@
             Follow on Facebook
           </a>
           <a 
-            href="https://wa.me/16474777772" 
+            href="https://wa.me/+12264552415"
             target="_blank" 
             rel="noopener noreferrer"
             class="flex items-center bg-green-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-shadow duration-300"

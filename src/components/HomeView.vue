@@ -10,7 +10,7 @@
     <ServiceProcess />
     
     <!-- Pricing Section -->
-    <PricingList />
+    <PricingSection />
 
     <!-- Packages & Deals Section -->
     <PricingOffers />
@@ -34,5 +34,5 @@ import PricingOffers from '../components/PricingOffers.vue'
 import BeforeAfterGallery from '../components/BeforeAfterGallery.vue'
 import ReviewsSection from '../components/ReviewsSection.vue'
 import ContactSection from '../components/ContactSection.vue'
-import PricingList from './PricingList.vue'
+import PricingSection from './PricingSection.vue'
 </script>

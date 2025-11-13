@@ -60,7 +60,7 @@
             (647) 477-7772
           </a>
           <a 
-            href="https://wa.me/16474777772" 
+            href="https://wa.me/+12264552415"
             target="_blank" 
             rel="noopener noreferrer"
             class="text-green-400 hover:text-green-300 transition-colors duration-200"
@@ -75,6 +75,14 @@
           >
             <Facebook class="w-5 h-5" />
           </a>
+          <a 
+              href="https://www.instagram.com/info.reflectionducts?igsh=dDdidzlnMzFubXZ0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+            >
+              <Instagram class="w-6 h-6" />
+            </a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -147,7 +155,7 @@
             </a>
             <div class="flex items-center space-x-4">
               <a 
-                href="https://wa.me/16474777772" 
+                href="https://wa.me/+12264552415"
                 target="_blank" 
                 rel="noopener noreferrer"
                 class="text-green-400 hover:text-green-300 transition-colors duration-200"
@@ -162,6 +170,14 @@
               >
                 <Facebook class="w-5 h-5" />
               </a>
+              <a 
+              href="https://www.instagram.com/info.reflectionducts?igsh=dDdidzlnMzFubXZ0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+              >
+                <Instagram class="w-6 h-6" />
+              </a>
             </div>
           </div>
         </div>
@@ -172,7 +188,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Phone, MessageCircle, Facebook, Menu, X } from 'lucide-vue-next'
+import { Phone, MessageCircle, Facebook, Menu, X, Instagram } from 'lucide-vue-next'
 
 const isMobileMenuOpen = ref(false)
 

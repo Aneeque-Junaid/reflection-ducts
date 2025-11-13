@@ -72,13 +72,25 @@ export const deals = [
   },
 ]
 
-export const pricingList = [
-  { service: 'Duct & Vents Cleaning', price: '$99' },
-  { service: 'Brushing Service', price: '$99' },
-  { service: 'Furnace', price: '$49' },
-  { service: 'Dryer Vent', price: '$15' },
-  { service: 'Return Line', price: '$25' },
-  { service: 'AC Coil Cleaning', price: '$49' },
-  { service: 'Complimentary Herbal Sanitization Spray', price: 'Included FREE' },
-  { service: 'Main Line Cleaning', price: 'Included in packages' },
-]
+export const pricingData = {
+  ontario: [
+    { service: 'Duct & Vents Cleaning', price: '$99' },
+    { service: 'Brushing Service', price: '$99' },
+    { service: 'Furnace', price: '$49' },
+    { service: 'Dryer Vent', price: '$15' },
+    { service: 'Return Line', price: '$25' },
+    { service: 'AC Coil Cleaning', price: '$49' },
+    { service: 'Complimentary Herbal Sanitization Spray', price: 'Included FREE' },
+    { service: 'Main Line Cleaning', price: 'Included in packages' },
+  ],
+  alberta: [
+    { service: 'Duct & Vents Cleaning', price: '$99' },
+    { service: 'Brushing Service', price: '$99' },
+    { service: 'Furnace', price: '$49' },
+    { service: 'Dryer Vent', price: '$15' },
+    { service: 'Return Line', price: '$25' },
+    { service: 'AC Coil Cleaning', price: '$49' },
+    { service: 'Complimentary Herbal Sanitization Spray', price: 'Included FREE' },
+    { service: 'Main Line Cleaning', price: 'Included in packages' },
+  ],
+};

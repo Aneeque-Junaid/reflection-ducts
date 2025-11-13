@@ -13,7 +13,7 @@
           </p>
           <div class="flex items-center space-x-4">
             <a 
-              href="https://wa.me/16474777772" 
+              href="https://wa.me/+12264552415"
               target="_blank" 
               rel="noopener noreferrer"
               class="text-green-400 hover:text-green-300 transition-colors duration-200"
@@ -27,6 +27,14 @@
               class="text-blue-400 hover:text-blue-300 transition-colors duration-200"
             >
               <Facebook class="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.instagram.com/info.reflectionducts?igsh=dDdidzlnMzFubXZ0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+            >
+              <Instagram class="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -135,6 +143,6 @@
 </template>
 
 <script setup lang="ts">
-import { Phone, Mail, MapPin, MessageCircle, Facebook } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram } from 'lucide-vue-next'
 </script>
 
