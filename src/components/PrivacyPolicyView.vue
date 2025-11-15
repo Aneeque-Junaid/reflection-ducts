@@ -87,7 +87,7 @@
           </p>
           <div class="bg-gray-50 p-6 rounded-lg">
             <p class="text-gray-700 mb-2"><strong>Reflection Ducts Cleaning</strong></p>
-            <p class="text-gray-700 mb-2">Phone: <a href="tel:+16474777772" class="text-blue-600 hover:text-blue-800">(647) 477-7772</a></p>
+            <p class="text-gray-700 mb-2">Phone: <a href="tel:+12264552415" class="text-blue-600 hover:text-blue-800">+1 (226) 455-2415</a></p>
             <p class="text-gray-700 mb-2">Email: <a href="mailto:privacy@reflectionducts.com" class="text-blue-600 hover:text-blue-800">privacy@reflectionducts.com</a></p>
             <p class="text-gray-700">Service Areas: Ontario, Calgary & Beyond</p>
           </div>

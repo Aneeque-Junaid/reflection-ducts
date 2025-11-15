@@ -10,7 +10,7 @@
     <ServiceProcess />
     
     <!-- Pricing Section -->
-    <PricingSection />
+    <!-- <PricingSection /> -->
 
     <!-- Packages & Deals Section -->
     <PricingOffers />

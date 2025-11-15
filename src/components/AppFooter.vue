@@ -93,10 +93,10 @@
             <li class="flex items-center text-gray-300">
               <Phone class="w-4 h-4 mr-2" />
               <a 
-                href="tel:+16474777772" 
+                href="tel:+12264552415" 
                 class="hover:text-white transition-colors duration-200"
               >
-                (647) 477-7772
+                +1 (226) 455-2415
               </a>
             </li>
             <li class="flex items-center text-gray-300">

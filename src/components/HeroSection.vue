@@ -47,11 +47,11 @@
           <!-- Phone Number -->
           <div class="mt-8">
             <a 
-              href="tel:+16474777772" 
+              href="tel:+12264552415" 
               class="text-2xl font-bold text-secondary-400 hover:text-secondary-300 transition-colors duration-200 flex items-center justify-center"
             >
               <Phone class="w-6 h-6 mr-2" />
-              (647) 477-7772
+              +1 (226) 455-2415
             </a>
             <p class="text-gray-400 mt-2">Call now for immediate assistance</p>
           </div>

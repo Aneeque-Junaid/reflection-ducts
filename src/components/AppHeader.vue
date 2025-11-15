@@ -53,11 +53,11 @@
         <!-- Contact Info & Social -->
         <div class="hidden lg:flex items-center space-x-4">
           <a 
-            href="tel:+16474777772" 
+            href="tel:+12264552415" 
             class="flex items-center text-secondary-400 hover:text-secondary-300 transition-colors duration-200"
           >
             <Phone class="w-4 h-4 mr-2" />
-            (647) 477-7772
+            +1 (226) 455-2415
           </a>
           <a 
             href="https://wa.me/+12264552415"
@@ -147,11 +147,11 @@
         <div class="mt-6 pt-4 border-t border-slate-700">
           <div class="flex flex-col space-y-3">
             <a 
-              href="tel:+16474777772" 
+              href="tel:+12264552415" 
               class="flex items-center text-secondary-400 hover:text-secondary-300 transition-colors duration-200"
             >
               <Phone class="w-4 h-4 mr-2" />
-              (647) 477-7772
+              +1 (226) 455-2415
             </a>
             <div class="flex items-center space-x-4">
               <a 

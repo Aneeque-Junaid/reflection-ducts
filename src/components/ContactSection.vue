@@ -21,10 +21,10 @@
             <div>
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
               <a 
-                href="tel:+16474777772" 
+                href="tel:+12264552415" 
                 class="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors duration-200"
               >
-                (647) 477-7772
+                +1 (226) 455-2415
               </a>
               <p class="text-gray-600 mt-1">Available 24/7 for emergency services</p>
             </div>
@@ -172,10 +172,10 @@
               Fire damage, flooding, or urgent air quality issues? We provide 24/7 emergency duct cleaning services.
             </p>
             <a 
-              href="tel:+16474777772" 
+              href="tel:+12264552415" 
               class="inline-block mt-2 bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200"
             >
-              Call Now: (647) 477-7772
+              Call Now: +1 (226) 455-2415
             </a>
           </div>
         </div>
