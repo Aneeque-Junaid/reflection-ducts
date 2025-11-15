@@ -48,9 +48,16 @@
 </template>
 
 <script setup lang="ts">
-import { packages, deals } from '@/utils/pricingData'
+import { computed } from 'vue'
 import PackageCard from './PackageCard.vue'
 import DealCard from './DealCard.vue'
+import { useRegionStore } from '@/store/regionStore'
+import { Packages, Deals } from '@/utils/pricingData'
+
+const regionStore = useRegionStore()
+
+const packages = computed(() => Packages[regionStore.region])
+const deals = computed(() => Deals[regionStore.region])
 
 const scrollToForm = () => {
   const formElement = document.getElementById('lead-form')

@@ -15,7 +15,7 @@
         <div 
           v-for="(review, index) in reviews" 
           :key="index"
-          class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
+          class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col"
         >
           <!-- Stars -->
           <div class="flex items-center mb-4">
@@ -35,7 +35,7 @@
           </blockquote>
           
           <!-- Customer Info -->
-          <div class="flex items-center">
+          <div class="flex items-center mt-auto">
             <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
               {{ review.name.charAt(0) }}
             </div>
@@ -116,21 +116,21 @@ const reviews = [
     location: 'Mississauga, ON',
     text: 'Professional service from start to finish. They explained everything they were doing and left my home cleaner than when they arrived. The air feels so much fresher now!'
   },
-  {
-    name: 'David Wilson',
-    location: 'Brampton, ON',
-    text: 'Fast, reliable, and reasonably priced. The technicians were knowledgeable and answered all my questions. I\'ll definitely be using their services again in the future.'
-  },
-  {
-    name: 'Lisa Rodriguez',
-    location: 'Oakville, ON',
-    text: 'Excellent customer service and quality work. They were able to schedule me in quickly and completed the job efficiently. My allergies have improved significantly!'
-  },
-  {
-    name: 'Robert Taylor',
-    location: 'Vaughan, ON',
-    text: 'I\'ve used several duct cleaning services over the years, but Reflection Ducts is by far the best. Thorough, professional, and honest. You won\'t be disappointed!'
-  }
+  // {
+  //   name: 'David Wilson',
+  //   location: 'Brampton, ON',
+  //   text: 'Fast, reliable, and reasonably priced. The technicians were knowledgeable and answered all my questions. I\'ll definitely be using their services again in the future.'
+  // },
+  // {
+  //   name: 'Lisa Rodriguez',
+  //   location: 'Oakville, ON',
+  //   text: 'Excellent customer service and quality work. They were able to schedule me in quickly and completed the job efficiently. My allergies have improved significantly!'
+  // },
+  // {
+  //   name: 'Robert Taylor',
+  //   location: 'Vaughan, ON',
+  //   text: 'I\'ve used several duct cleaning services over the years, but Reflection Ducts is by far the best. Thorough, professional, and honest. You won\'t be disappointed!'
+  // }
 ]
 </script>
 

@@ -7,22 +7,22 @@
     <LeadForm />
     
     <!-- Service Process Section -->
-    <ServiceProcess />
+    <ServiceProcess id="process" />
     
     <!-- Pricing Section -->
     <!-- <PricingSection /> -->
 
     <!-- Packages & Deals Section -->
-    <PricingOffers />
+    <PricingOffers id="packages" />
     
     <!-- Before & After Gallery -->
     <BeforeAfterGallery />
     
     <!-- Reviews Section -->
-    <ReviewsSection />
+    <ReviewsSection id="reviews" />
     
     <!-- Contact Section -->
-    <ContactSection />
+    <ContactSection id="contact" />
   </div>
 </template>
 
