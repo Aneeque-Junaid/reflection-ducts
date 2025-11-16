@@ -21,7 +21,7 @@
       </div>
 
       <!-- Special Deals -->
-      <div class="bg-gray-50 rounded-xl p-8">
+      <div class="bg-gray-50 rounded-xl">
         <div class="text-center mb-8">
           <h3 class="text-2xl font-bold text-gray-900 mb-2">Special Deals</h3>
           <p class="text-gray-600">Mix and match services for the best value</p>
