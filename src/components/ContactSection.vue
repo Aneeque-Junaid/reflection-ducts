@@ -38,10 +38,10 @@
             <div>
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
               <a 
-                href="mailto:info@reflectionducts.com" 
+                href="mailto:Info.reflectionducts@gmail.com" 
                 class="text-lg text-secondary-600 hover:text-secondary-700 transition-colors duration-200"
               >
-                info@reflectionducts.com
+                Info.reflectionducts@gmail.com
               </a>
               <p class="text-gray-600 mt-1">We'll respond within 24 hours</p>
             </div>
@@ -55,10 +55,10 @@
             <div>
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Service Area</h3>
               <p class="text-gray-700">
-                Ontario: Toronto, Mississauga, Brampton, Oakville, Vaughan, Milton, Burlington
+                Ontario
               </p>
               <p class="text-gray-700 mt-1">
-                Alberta: Calgary and surrounding areas
+                Alberta
               </p>
               <p class="text-gray-600 mt-2">Licensed and insured in all service areas</p>
             </div>
@@ -79,7 +79,6 @@
                   class="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                 >
                   <Facebook class="w-5 h-5 mr-2" />
-                  @reflectionducts
                 </a>
                 <a 
                   href="https://wa.me/+12264552415"
@@ -88,7 +87,14 @@
                   class="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
                 >
                   <MessageCircle class="w-5 h-5 mr-2" />
-                  WhatsApp
+                </a>
+                <a 
+                  href="https://www.instagram.com/info.reflectionducts?igsh=dDdidzlnMzFubXZ0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-pink-400 hover:text-pink-300 transition-colors duration-200"
+                >
+                  <Instagram class="w-6 h-6" />
                 </a>
               </div>
               <p class="text-gray-600 mt-2">See our latest work and customer stories</p>
@@ -186,7 +192,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import { Phone, Mail, MapPin, Facebook, MessageCircle, AlertCircle } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, Facebook, MessageCircle, AlertCircle, Instagram } from 'lucide-vue-next'
 
 const quickForm = reactive({
   name: '',

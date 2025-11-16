@@ -102,10 +102,10 @@
             <li class="flex items-center text-gray-300">
               <Mail class="w-4 h-4 mr-2" />
               <a 
-                href="mailto:info@reflectionducts.com" 
+                href="mailto:Info.reflectionducts@gmail.com" 
                 class="hover:text-white transition-colors duration-200"
               >
-                info@reflectionducts.com
+                Info.reflectionducts@gmail.com
               </a>
             </li>
             <li class="flex items-start text-gray-300">

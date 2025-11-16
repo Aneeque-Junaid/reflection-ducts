@@ -52,7 +52,7 @@ import { computed } from 'vue'
 import PackageCard from './PackageCard.vue'
 import DealCard from './DealCard.vue'
 import { useRegionStore } from '@/store/regionStore'
-import { Packages, Deals } from '@/utils/pricingData'
+import { Packages, Deals } from '@/utils/pricingData.js'
 
 const regionStore = useRegionStore()
 

@@ -16,7 +16,10 @@
           
           <!-- Subheadline -->
           <p class="text-xl md:text-2xl text-gray-300 mb-8">
-            Serving Canada – Ontario, Calgary & Beyond
+            Serving Ontario & Alberta
+          </p>
+          <p class="text-xl md:text-2xl text-gray-300 mb-8">
+            ReflectionDucts specialize in your Indoor Air Quality. Removing dust, mold, pet dander, allergens.
           </p>
           
           <!-- Features -->

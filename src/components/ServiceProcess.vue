@@ -3,10 +3,10 @@
     <div class="container-custom">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          How We Work
+          Our Cleaning Process
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Our proven 4-step process ensures thorough, professional duct cleaning that delivers exceptional results every time.
+          We provide professional duct and vent cleaning using a powerful vacuum-truck system to remove dust and debris. The service takes about 90–120 minutes, ending with a Herbal Benefect disinfectant treatment to eliminate bacteria and germs.
         </p>
       </div>
       
@@ -17,12 +17,12 @@
             <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               <Search class="w-8 h-8 text-white" />
             </div>
-            <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
               1
-            </div>
+            </div> -->
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Book a Free Inspection
+            Step 1
           </h3>
           <p class="text-gray-600">
             We start with a comprehensive inspection of your ductwork to assess the cleaning needs and provide an accurate quote.
@@ -35,12 +35,12 @@
             <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               <Wrench class="w-8 h-8 text-white" />
             </div>
-            <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
               2
-            </div>
+            </div> -->
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Professional Cleaning
+            Step 2
           </h3>
           <p class="text-gray-600">
             Our trained technicians use industry-standard equipment to thoroughly clean your ducts, vents, and HVAC components.
@@ -53,12 +53,12 @@
             <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               <CheckCircle class="w-8 h-8 text-white" />
             </div>
-            <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
               3
-            </div>
+            </div> -->
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Review & Approval
+            Step 3
           </h3>
           <p class="text-gray-600">
             We conduct a thorough review of our work with you, ensuring everything meets our high standards and your expectations.
@@ -71,12 +71,12 @@
             <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
               <Sparkles class="w-8 h-8 text-white" />
             </div>
-            <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
               4
-            </div>
+            </div> -->
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Results Delivered
+            Step 4
           </h3>
           <p class="text-gray-600">
             Enjoy cleaner air, improved HVAC efficiency, and peace of mind knowing your ducts are professionally maintained.
