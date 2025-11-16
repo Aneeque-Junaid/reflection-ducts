@@ -107,32 +107,32 @@ export const Deals = {
   Ontario: [
     {
       dealTitle: "Starter Clean",
-      services: ["Ducts", "Dryer Vent"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent"],
       price: "$115",
       savings: "Save $30"
     },
     {
       dealTitle: "Essential Care",
-      services: ["Ducts", "Furnace", "Dryer Vent"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent"],
       price: "$169",
       savings: "Save $50"
     },
     {
       dealTitle: "Complete Home",
-      services: ["Ducts", "Furnace", "Dryer Vent", "Return Line"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent", "Return Line"],
       price: "$199",
       savings: "Save $75"
     },
     {
       dealTitle: "Premium Service",
-      services: ["Ducts", "Dryer Vent", "Furnace", "Return Line", "Brushing Service"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service"],
       price: "$259",
       savings: "Save $100",
       popular: true
     },
     {
       dealTitle: "Ultimate Package",
-      services: ["Ducts", "Dryer Vent", "Furnace", "Return Line", "Brushing Service", "AC Coil Cleaning"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service", "AC Coil Cleaning"],
       price: "$319",
       savings: "Save $130"
     }
@@ -141,32 +141,32 @@ export const Deals = {
   Alberta: [
     {
       dealTitle: "Starter Clean",
-      services: ["Ducts", "Dryer Vent"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent"],
       price: "$105",
       savings: "Save $25"
     },
     {
       dealTitle: "Essential Care",
-      services: ["Ducts", "Furnace", "Dryer Vent"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent"],
       price: "$159",
       savings: "Save $45"
     },
     {
       dealTitle: "Complete Home",
-      services: ["Ducts", "Furnace", "Dryer Vent", "Return Line"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent", "Return Line"],
       price: "$185",
       savings: "Save $70"
     },
     {
       dealTitle: "Premium Service",
-      services: ["Ducts", "Dryer Vent", "Furnace", "Return Line", "Brushing Service"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service"],
       price: "$239",
       savings: "Save $95",
       popular: true
     },
     {
       dealTitle: "Ultimate Package",
-      services: ["Ducts", "Dryer Vent", "Furnace", "Return Line", "Brushing Service", "AC Coil Cleaning"],
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service", "AC Coil Cleaning"],
       price: "$299",
       savings: "Save $120"
     }
