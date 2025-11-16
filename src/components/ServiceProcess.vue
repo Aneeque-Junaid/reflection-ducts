@@ -11,75 +11,25 @@
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Step 1 -->
-        <div class="text-center group">
+        <div
+          v-for="item in stepsData"
+          :key="item.step"
+          class="text-center group"
+        >
           <div class="relative mb-6">
-            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-              <Search class="w-8 h-8 text-white" />
+            <div
+              class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+            >
+              <component :is="item.icon" class="w-8 h-8 text-white" />
             </div>
-            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-              1
-            </div> -->
           </div>
+
           <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Step 1
+            {{ item.title }}
           </h3>
+
           <p class="text-gray-600">
-            We start with a comprehensive inspection of your ductwork to assess the cleaning needs and provide an accurate quote.
-          </p>
-        </div>
-        
-        <!-- Step 2 -->
-        <div class="text-center group">
-          <div class="relative mb-6">
-            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-              <Wrench class="w-8 h-8 text-white" />
-            </div>
-            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-              2
-            </div> -->
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Step 2
-          </h3>
-          <p class="text-gray-600">
-            Our trained technicians use industry-standard equipment to thoroughly clean your ducts, vents, and HVAC components.
-          </p>
-        </div>
-        
-        <!-- Step 3 -->
-        <div class="text-center group">
-          <div class="relative mb-6">
-            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-              <CheckCircle class="w-8 h-8 text-white" />
-            </div>
-            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-              3
-            </div> -->
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Step 3
-          </h3>
-          <p class="text-gray-600">
-            We conduct a thorough review of our work with you, ensuring everything meets our high standards and your expectations.
-          </p>
-        </div>
-        
-        <!-- Step 4 -->
-        <div class="text-center group">
-          <div class="relative mb-6">
-            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-              <Sparkles class="w-8 h-8 text-white" />
-            </div>
-            <!-- <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-              4
-            </div> -->
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">
-            Step 4
-          </h3>
-          <p class="text-gray-600">
-            Enjoy cleaner air, improved HVAC efficiency, and peace of mind knowing your ducts are professionally maintained.
+            {{ item.description }}
           </p>
         </div>
       </div>
@@ -103,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import { Search, Wrench, CheckCircle, Sparkles } from 'lucide-vue-next'
+import { stepsData } from '@/utils/contentData'
 
 const scrollToForm = () => {
   const formElement = document.getElementById('lead-form')

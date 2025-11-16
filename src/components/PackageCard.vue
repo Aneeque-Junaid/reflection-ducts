@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 relative',
+      'bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 relative flex flex-col',
       isPopular ? 'border-secondary-500' : `border-${borderColor}`,
     ]"
   >
@@ -29,6 +29,10 @@
       </li>
     </ul>
 
+      <p v-if="note" class="text-sm text-gray-500 italic text-center pb-4 mt-auto">
+        {{ note }}
+      </p>
+
     <button class="w-full" :class="buttonClass">
       Buy Now
     </button>
@@ -43,6 +47,7 @@ defineProps<{
   price: string
   color: string
   description: string
+  note: string
   features: string[]
   borderColor: string
   buttonClass: string

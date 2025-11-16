@@ -6,6 +6,7 @@ export const Packages = {
       color: "primary",
       description: "Perfect for regular maintenance",
       borderColor: "gray-200",
+      note: "Applicable for One Gas Furnace",
       features: [
         "Unlimited Duct Cleaning",
         "Unlimited Vents Cleaning",
@@ -22,6 +23,7 @@ export const Packages = {
       description: "Comprehensive cleaning solution",
       borderColor: "secondary-500",
       isPopular: true,
+      note: "Applicable for One Gas Furnace",
       features: [
         "Unlimited Duct Cleaning",
         "Unlimited Vents Cleaning",
@@ -38,6 +40,7 @@ export const Packages = {
       color: "accent",
       description: "Complete premium service",
       borderColor: "gray-200",
+      note: "Applicable for One Gas Furnace",
       features: [
         "Unlimited Duct Cleaning",
         "Unlimited Vents Cleaning",
@@ -53,54 +56,60 @@ export const Packages = {
   Alberta: [
     {
       name: "Basic",
-      price: "$89",
+      price: "$149",
       color: "primary",
-      description: "Essential cleaning for Alberta homes",
+      description: "Perfect for regular maintenance",
       borderColor: "gray-200",
+      note: "Applicable for One Gas Furnace",
       features: [
         "Unlimited Duct Cleaning",
-        "Unlimited Vent Cleaning",
-        "Main Line Cleaning",
-        "Herbal Sanitizer Spray",
-        "System Inspection",
+        "Unlimited Vents Cleaning",
+        "Herbal Sanitization Spray",
+        "Free Dryer Vent Inspection",
+        "Free Furnace & AC Inspection",
       ],
       buttonClass: "btn-primary",
     },
     {
       name: "Premium",
-      price: "$179",
+      price: "$199",
       color: "secondary",
-      description: "Deep cleaning ideal for larger homes",
+      description: "Comprehensive cleaning solution",
       borderColor: "secondary-500",
       isPopular: true,
+      note: "Applicable for One Gas Furnace",
       features: [
         "Unlimited Duct Cleaning",
-        "Unlimited Vent Cleaning",
-        "Dryer Vent Cleaning",
-        "Disinfectant Spray",
-        "Furnace Cleaning",
-        "AC Coil Check",
+        "Unlimited Vents Cleaning",
+        "Dryer & Dryer Vent Cleaning",
+        "Herbal Benefect Sanitizer",
+        "Free Furnace Inspection",
+        "Free AC/Coil Inspection",
       ],
       buttonClass: "btn-secondary",
     },
     {
       name: "Deluxe",
-      price: "$349",
+      price: "$399",
       color: "accent",
-      description: "Full premium package for complete home care",
+      description: "Complete premium service",
       borderColor: "gray-200",
+      note: "Applicable for One Gas Furnace",
       features: [
         "Unlimited Duct Cleaning",
-        "Unlimited Vent Cleaning",
-        "DryerVent/Exhaust Fan Cleaning",
-        "Full Brushing Service",
-        "Furnace + AC Coil Cleaning",
-        "Natural Disinfectant Spray",
+        "Unlimited Vents Cleaning",
+        "Furnace Cleaning",
+        "Dryer Vent Cleaning",
+        "AC Coil Cleaning",
+        "Main Line Cleaning",
+        "Brushing / Scrubbing Service",
+        "Herbal Sanitization Treatment",
+        "Before & After Pictures Provided",
       ],
       buttonClass: "btn-accent",
     },
   ],
-}
+};
 
 
 export const Deals = {
@@ -109,69 +118,116 @@ export const Deals = {
       dealTitle: "Starter Clean",
       services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent"],
       price: "$115",
-      savings: "Save $30"
+      savings: "Save $30",
     },
     {
       dealTitle: "Essential Care",
       services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent"],
       price: "$169",
-      savings: "Save $50"
+      savings: "Save $50",
     },
     {
       dealTitle: "Complete Home",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent", "Return Line"],
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Furnace",
+        "Dryer Vent",
+        "Return Line",
+      ],
       price: "$199",
-      savings: "Save $75"
+      savings: "Save $75",
     },
     {
       dealTitle: "Premium Service",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service"],
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Dryer Vent",
+        "Furnace",
+        "Return Line",
+        "Brushing Service",
+      ],
       price: "$259",
       savings: "Save $100",
-      popular: true
+      popular: true,
     },
     {
       dealTitle: "Ultimate Package",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service", "AC Coil Cleaning"],
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Dryer Vent",
+        "Furnace",
+        "Return Line",
+        "Brushing Service",
+        "AC Coil Cleaning",
+      ],
       price: "$319",
-      savings: "Save $130"
-    }
+      savings: "Save $130",
+    },
   ],
 
   Alberta: [
     {
-      dealTitle: "Starter Clean",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent"],
-      price: "$105",
-      savings: "Save $25"
+      dealTitle: "Essential Package",
+      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent Cleaning"],
+      price: "$165",
     },
     {
-      dealTitle: "Essential Care",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent"],
-      price: "$159",
-      savings: "Save $45"
+      dealTitle: "Comfort Package",
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Duct Cleaning",
+        "Furnace Cleaning",
+        "Dryer Vent Cleaning",
+      ],
+      price: "$219",
     },
     {
-      dealTitle: "Complete Home",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Furnace", "Dryer Vent", "Return Line"],
-      price: "$185",
-      savings: "Save $70"
+      dealTitle: "Advanced Package",
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Duct Cleaning",
+        "Furnace Cleaning",
+        "Dryer Vent Cleaning",
+        "Return Line Cleaning",
+      ],
+      price: "$249",
     },
     {
-      dealTitle: "Premium Service",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service"],
-      price: "$239",
-      savings: "Save $95",
-      popular: true
+      dealTitle: "Elite Package",
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Duct Cleaning",
+        "Furnace Cleaning",
+        "Dryer Vent Cleaning",
+        "Return Line Cleaning",
+        "Brushing Service",
+      ],
+      price: "$349",
+      popular: true,
     },
     {
-      dealTitle: "Ultimate Package",
-      services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent", "Furnace", "Return Line", "Brushing Service", "AC Coil Cleaning"],
-      price: "$299",
-      savings: "Save $120"
-    }
-  ]
-}
+      dealTitle: "Platinum Package",
+      services: [
+        "Unlimited Ducts",
+        "Unlimited Vents",
+        "Duct Cleaning",
+        "Furnace Cleaning",
+        "Dryer Vent Cleaning",
+        "Return Line Cleaning",
+        "Brushing Service",
+        "AC Coil Cleaning",
+      ],
+      price: "$399",
+    },
+  ],
+};
+
 
 
 export const pricingData = {

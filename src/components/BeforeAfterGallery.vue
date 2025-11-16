@@ -15,7 +15,7 @@
         <div 
           v-for="(item, index) in galleryItems" 
           :key="index"
-          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
         >
           <div class="relative">
             <!-- Image Container -->
@@ -78,12 +78,12 @@
           </div>
           
           <!-- Card Content -->
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-grow">
             <h3 class="font-semibold text-gray-900 mb-2">{{ item.title }}</h3>
             <p class="text-gray-600 text-sm">{{ item.description }}</p>
             
             <!-- Progress Dots -->
-            <div class="flex justify-center space-x-2 mt-4">
+            <div class="flex justify-center space-x-2 mt-auto p-4">
               <div 
                 class="w-2 h-2 rounded-full transition-colors duration-300"
                 :class="activeIndices[index] === 0 ? 'bg-red-500' : 'bg-gray-300'"
@@ -114,35 +114,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Camera, ChevronLeft, ChevronRight } from 'lucide-vue-next'
+import { galleryItems } from '@/utils/contentData'
 
 const activeIndices = ref(Array(6).fill(0)) // 0 = before, 1 = after
 
-const galleryItems = [
-  {
-    title: 'Residential Duct System',
-    description: 'Complete transformation of a home duct system with years of buildup removed.'
-  },
-  {
-    title: 'Dryer Vent Cleaning',
-    description: 'Dangerous lint buildup completely removed, improving safety and efficiency.'
-  },
-  {
-    title: 'Furnace Coil Cleaning',
-    description: 'HVAC coils restored to like-new condition for optimal performance.'
-  },
-  {
-    title: 'Commercial Ductwork',
-    description: 'Office building ductwork cleaned to improve air quality for employees.'
-  },
-  {
-    title: 'Return Air Ducts',
-    description: 'Return air system thoroughly cleaned and sanitized.'
-  },
-  {
-    title: 'Vent Covers',
-    description: 'All vent covers cleaned and polished to perfection.'
-  }
-]
 
 const toggleImage = (index: number, direction: 'next' | 'prev') => {
   if (direction === 'next' && activeIndices.value[index] === 0) {

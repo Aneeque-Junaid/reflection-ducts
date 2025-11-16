@@ -54,7 +54,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 import ReviewCard from '@/components/ReviewCard.vue'
-import { reviews } from '@/utils/reviewsData'
+import { reviews } from '@/utils/contentData'
 
 const currentIndex = ref(0)
 const screenWidth = ref(window.innerWidth)
