@@ -131,15 +131,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, defineProps, defineExpose } from 'vue'
 import { CheckCircle } from 'lucide-vue-next'
+
+// WHATSAPP NUMBER (no + sign)
+const WHATSAPP_NUMBER = "12264552415"
+
+const props = defineProps<{
+  prefillMessage?: string
+}>()
 
 const form = reactive({
   name: '',
   phone: '',
   email: '',
   postalCode: '',
-  message: ''
+  message: props.prefillMessage || ''
 })
 
 const errors = reactive({
@@ -153,105 +160,89 @@ const errors = reactive({
 const isSubmitting = ref(false)
 const showSuccess = ref(false)
 
+// --- VALIDATION FUNCTIONS ---
 const validatePhone = () => {
   const phoneRegex = /^[\d\s\-\(\)]+$/
-  if (!phoneRegex.test(form.phone)) {
-    errors.phone = 'Phone number must contain only digits, spaces, hyphens, and parentheses'
-  } else {
-    errors.phone = ''
-  }
+  errors.phone = phoneRegex.test(form.phone)
+    ? ''
+    : 'Phone number must contain only digits, spaces, hyphens, and parentheses'
 }
 
 const validateEmail = () => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(form.email)) {
-    errors.email = 'Please enter a valid email address'
-  } else {
-    errors.email = ''
-  }
+  errors.email = emailRegex.test(form.email)
+    ? ''
+    : 'Please enter a valid email address'
 }
 
 const validatePostalCode = () => {
   const postalCodeRegex = /^[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d$/
-  if (!postalCodeRegex.test(form.postalCode)) {
-    errors.postalCode = 'Please enter a valid Canadian postal code (e.g., M5A 1A1)'
-  } else {
-    errors.postalCode = ''
-  }
+  errors.postalCode = postalCodeRegex.test(form.postalCode)
+    ? ''
+    : 'Please enter a valid Canadian postal code (e.g., M5A 1A1)'
 }
 
 const validateForm = () => {
   let isValid = true
-  
-  // Reset errors
-  Object.keys(errors).forEach(key => {
-    errors[key as keyof typeof errors] = ''
-  })
-  
-  // Validate required fields
-  if (!form.name.trim()) {
-    errors.name = 'Name is required'
-    isValid = false
-  }
-  
-  if (!form.phone.trim()) {
-    errors.phone = 'Phone number is required'
-    isValid = false
-  } else {
-    validatePhone()
-    if (errors.phone) isValid = false
-  }
-  
-  if (!form.email.trim()) {
-    errors.email = 'Email is required'
-    isValid = false
-  } else {
-    validateEmail()
-    if (errors.email) isValid = false
-  }
-  
-  if (!form.postalCode.trim()) {
-    errors.postalCode = 'Postal code is required'
-    isValid = false
-  } else {
-    validatePostalCode()
-    if (errors.postalCode) isValid = false
-  }
-  
-  if (!form.message.trim()) {
-    errors.message = 'Please describe the service you need'
-    isValid = false
-  }
-  
+  Object.keys(errors).forEach(key => (errors[key as keyof typeof errors] = ''))
+
+  if (!form.name.trim()) { errors.name = 'Name is required'; isValid = false }
+  if (!form.phone.trim()) { errors.phone = 'Phone is required'; isValid = false }
+  else { validatePhone(); if (errors.phone) isValid = false }
+
+  if (!form.email.trim()) { errors.email = 'Email is required'; isValid = false }
+  else { validateEmail(); if (errors.email) isValid = false }
+
+  if (!form.postalCode.trim()) { errors.postalCode = 'Postal code is required'; isValid = false }
+  else { validatePostalCode(); if (errors.postalCode) isValid = false }
+
+  if (!form.message.trim()) { errors.message = 'Please describe the service you need'; isValid = false }
+
   return isValid
 }
 
+// --- WHATSAPP MESSAGE ---
+const buildWhatsappMessage = () => `
+*New Quote Request*
+
+*Name:* ${form.name}
+*Phone:* ${form.phone}
+*Email:* ${form.email}
+*Postal Code:* ${form.postalCode}
+
+*Service Needed:* 
+${form.message}
+`
+
+// --- SUBMISSION ---
 const submitForm = async () => {
-  if (!validateForm()) {
-    return
-  }
-  
+  if (!validateForm()) return
+
   isSubmitting.value = true
-  
+
   try {
-    // Simulate form submission (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
+    const message = buildWhatsappMessage()
+    const encoded = encodeURIComponent(message)
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`
+
+    window.open(url, "_blank")
+
     // Reset form
-    Object.keys(form).forEach(key => {
-      form[key as keyof typeof form] = ''
-    })
-    
+    Object.keys(form).forEach(key => form[key as keyof typeof form] = '')
+
     showSuccess.value = true
-    setTimeout(() => {
-      showSuccess.value = false
-    }, 5000)
-    
-  } catch (error) {
-    console.error('Form submission error:', error)
+    setTimeout(() => (showSuccess.value = false), 5000)
+
   } finally {
     isSubmitting.value = false
   }
 }
-</script>
 
+// --- METHOD TO PREFILL SERVICE FIELD ---
+const updatePrefillMessage = (msg: string) => {
+  form.message = msg
+  document.querySelector('#lead-form')?.scrollIntoView({ behavior: 'smooth' })
+}
+
+defineExpose({ updatePrefillMessage })
+</script>

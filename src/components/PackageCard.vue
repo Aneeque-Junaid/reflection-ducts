@@ -5,10 +5,7 @@
       isPopular ? 'border-secondary-500' : `border-${borderColor}`,
     ]"
   >
-    <div
-      v-if="isPopular"
-      class="absolute -top-4 left-1/2 transform -translate-x-1/2"
-    >
+    <div v-if="isPopular" class="absolute -top-4 left-1/2 transform -translate-x-1/2">
       <span class="bg-secondary-500 text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap min-w-max">
         Most Popular
       </span>
@@ -29,11 +26,15 @@
       </li>
     </ul>
 
-      <p v-if="note" class="text-sm text-gray-500 italic text-center pb-4 mt-auto">
-        {{ note }}
-      </p>
+    <p v-if="note" class="text-sm text-gray-500 italic text-center pb-4 mt-auto">
+      {{ note }}
+    </p>
 
-    <button class="w-full" :class="buttonClass">
+    <button
+      class="w-full"
+      :class="buttonClass"
+      @click="emitDeal"
+    >
       Buy Now
     </button>
   </div>
@@ -42,7 +43,9 @@
 <script setup lang="ts">
 import { Check } from 'lucide-vue-next'
 
-defineProps<{
+const emit = defineEmits(['select'])
+
+const props = defineProps<{
   name: string
   price: string
   color: string
@@ -54,4 +57,7 @@ defineProps<{
   isPopular?: boolean
 }>()
 
+const emitDeal = () => {
+  emit('select', `Package: ${props.name} - ${props.description} - ${props.price}`)
+}
 </script>
