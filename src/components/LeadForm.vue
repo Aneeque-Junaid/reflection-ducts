@@ -105,17 +105,25 @@
           </div>
           
           <!-- Submit Button -->
-          <button
-            type="submit"
-            :disabled="isSubmitting"
-            class="w-full btn-primary text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <span v-if="!isSubmitting">Get My Free Quote</span>
-            <span v-else class="flex items-center justify-center">
-              <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-              Submitting...
-            </span>
-          </button>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <button
+              type="button"
+              @click="submitWhatsapp"
+              :disabled="isSubmitting"
+              class="w-full btn-whatsapp text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Send via WhatsApp
+            </button>
+
+            <button
+              type="button"
+              @click="submitSMS"
+              :disabled="isSubmitting"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-4 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Send via SMS
+            </button>
+          </div>
           
           <!-- Success Message -->
           <div v-if="showSuccess" class="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
@@ -134,8 +142,8 @@
 import { ref, reactive, defineProps, defineExpose } from 'vue'
 import { CheckCircle } from 'lucide-vue-next'
 
-// WHATSAPP NUMBER (no + sign)
 const WHATSAPP_NUMBER = "12264552415"
+const SMS_NUMBER = "12264552415"
 
 const props = defineProps<{
   prefillMessage?: string
@@ -214,29 +222,58 @@ const buildWhatsappMessage = () => `
 ${form.message}
 `
 
+const buildPlainMessage = () => 
+`New Quote Request
+
+Name: ${form.name}
+Phone: ${form.phone}
+Email: ${form.email}
+Postal Code: ${form.postalCode}
+
+Service Needed:
+${form.message}`
+
 // --- SUBMISSION ---
-const submitForm = async () => {
+const submitWhatsapp = async () => {
   if (!validateForm()) return
 
   isSubmitting.value = true
-
   try {
     const message = buildWhatsappMessage()
     const encoded = encodeURIComponent(message)
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`
-
     window.open(url, "_blank")
 
-    // Reset form
-    Object.keys(form).forEach(key => form[key as keyof typeof form] = '')
-
-    showSuccess.value = true
-    setTimeout(() => (showSuccess.value = false), 5000)
-
+    resetFormSuccess()
   } finally {
     isSubmitting.value = false
   }
 }
+
+
+const submitSMS = async () => {
+  if (!validateForm()) return
+
+  isSubmitting.value = true
+  try {
+    const message = buildPlainMessage()
+    const encoded = encodeURIComponent(message)
+
+    const url = `sms:${SMS_NUMBER}?&body=${encoded}`
+    window.location.href = url   // opens SMS app
+
+    resetFormSuccess()
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
+const resetFormSuccess = () => {
+  Object.keys(form).forEach(key => form[key as keyof typeof form] = "")
+  showSuccess.value = true
+  setTimeout(() => (showSuccess.value = false), 5000)
+}
+
 
 // --- METHOD TO PREFILL SERVICE FIELD ---
 const updatePrefillMessage = (msg: string) => {

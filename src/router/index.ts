@@ -10,26 +10,6 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/services',
-      name: 'services',
-      component: HomeView, // Services are on the home page
-    },
-    {
-      path: '/process',
-      name: 'process',
-      component: HomeView, // Process is on the home page
-    },
-    {
-      path: '/reviews',
-      name: 'reviews',
-      component: HomeView, // Reviews are on the home page
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: HomeView, // Contact is on the home page
-    },
-    {
       path: '/privacy-policy',
       name: 'privacy-policy',
       component: () => import('../components/PrivacyPolicyView.vue'),

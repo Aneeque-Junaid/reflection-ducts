@@ -44,44 +44,28 @@
           <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
             <li>
-              <router-link 
-                to="/" 
-                class="text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Home
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/services" 
-                class="text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Services
-              </router-link>
-            </li>
-            <li>
-              <router-link 
-                to="/process" 
-                class="text-gray-300 hover:text-white transition-colors duration-200"
-              >
+              <button @click="scrollTo('process')" 
+                class="hover:text-secondary-400 transition-colors duration-200">
                 Process
-              </router-link>
+              </button>
             </li>
             <li>
-              <router-link 
-                to="/reviews" 
-                class="text-gray-300 hover:text-white transition-colors duration-200"
-              >
+              <button @click="scrollTo('packages')" 
+                class="hover:text-secondary-400 transition-colors duration-200">
+                Packages & Deals
+              </button>
+            </li>
+            <li>
+              <button @click="scrollTo('reviews')" 
+                class="hover:text-secondary-400 transition-colors duration-200">
                 Reviews
-              </router-link>
+              </button>
             </li>
             <li>
-              <router-link 
-                to="/contact" 
-                class="text-gray-300 hover:text-white transition-colors duration-200"
-              >
+              <button @click="scrollTo('contact')" 
+                class="hover:text-secondary-400 transition-colors duration-200">
                 Contact
-              </router-link>
+              </button>
             </li>
           </ul>
         </div>
@@ -144,5 +128,13 @@
 
 <script setup lang="ts">
 import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram } from 'lucide-vue-next'
+
+const scrollTo = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
+
 </script>
 
