@@ -22,27 +22,36 @@
             <div class="aspect-w-16 aspect-h-12 bg-gray-200 flex items-center justify-center relative overflow-hidden" style="min-height: 250px;">
               <!-- Before Image -->
               <div 
-                class="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-in-out"
+                class="absolute inset-0 transition-transform duration-500 ease-in-out"
                 :class="activeIndices[index] === 0 ? 'translate-x-0' : '-translate-x-full'"
               >
-                <div class="text-center p-8">
+                <img 
+                  v-if="item.before" 
+                  :src="item.before" 
+                  alt="Before" 
+                  class="w-full h-full object-cover"
+                />
+                <div v-else class="flex items-center justify-center h-full bg-gray-200 p-8 text-center">
                   <Camera class="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                  <p class="text-gray-500 font-medium">Before</p>
-                  <p class="text-sm text-gray-400 mt-2">{{ item.title }}</p>
                 </div>
               </div>
-              
+                            
               <!-- After Image -->
               <div 
-                class="absolute inset-0 flex items-center justify-center bg-green-50 transition-transform duration-500 ease-in-out"
+                class="absolute inset-0 transition-transform duration-500 ease-in-out"
                 :class="activeIndices[index] === 1 ? 'translate-x-0' : 'translate-x-full'"
               >
-                <div class="text-center p-8">
+                <img 
+                  v-if="item.after" 
+                  :src="item.after" 
+                  alt="After" 
+                  class="w-full h-full object-cover"
+                />
+                <div v-else class="flex items-center justify-center h-full bg-green-50 p-8 text-center">
                   <Camera class="w-12 h-12 text-green-500 mx-auto mb-4" />
-                  <p class="text-green-600 font-medium">After</p>
-                  <p class="text-sm text-gray-600 mt-2">Professionally Cleaned</p>
                 </div>
               </div>
+
               
               <!-- Status Badge -->
               <div class="absolute top-4 left-4 z-10">

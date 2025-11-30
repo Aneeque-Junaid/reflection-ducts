@@ -41,30 +41,43 @@ export const reviews = [
 
 export const galleryItems = [
   {
-  title: 'Furnace Cleaning',
-  description: 'Cleaning the furnace is vital for maintaining a safe and efficient heating system. This process includes removing'
+    title: "Furnace Cleaning",
+    description: "Cleaning the furnace is vital for maintaining a safe and efficient heating system.",
+    before: "/images/FurnaceBefore.jpeg",
+    after: "/images/FurnaceAfter.jpeg"
   },
   {
-  title: 'Dryer Vent Cleaning',
-  description: 'Dryer vent cleaning entails removing dust and debris from both the vent and filters to ensure proper airflow and efficiency.'
+    title: "Dryer Vent Cleaning",
+    description: "Dryer vent cleaning ensures proper airflow and efficiency.",
+    before: "/images/DryerVentBefore.jpeg",
+    after: "/images/DryerVentAfter.jpeg"
   },
   {
-  title: 'Blower Motor Cleaning',
-  description: 'Blower motor cleaning is crucial for ensuring the efficiency and performance of your HVAC system.'
+    title: "Blower Motor Cleaning",
+    description: "Blower motor cleaning improves HVAC efficiency.",
+    before: "/images/FurnaceBlowerBefore.jpeg",
+    after: "/images/FurnaceBlowerAfter.jpeg"
   },
   {
-  title: 'Register and Return Vents',
-  description: 'Register and return vents are essential for ensuring efficient airflow in your HVAC system.'
+    title: "Register and Return Vents",
+    description: "Ensures efficient airflow throughout the HVAC system.",
+    before: "/images/VentsBefore.jpeg",
+    after: "/images/VentsAfter.jpeg"
   },
   {
-  title: 'Duct Deep + Brushing Cleaning',
-  description: 'Deep brushing cleaning uses specialized tools to thoroughly remove dust, debris, and allergens from ductwork.'
+    title: "Duct Deep + Brushing Cleaning",
+    description: "Deep brushing removes dust, debris, and allergens.",
+    before: "/images/DuctBefore.jpeg",
+    after: "/images/DuctAfter.jpeg"
   },
   {
-  title: 'Furnace Filter Cleaning',
-  description: 'Cleaning and replacing furnace filters are crucial for preserving indoor air quality and ensuring efficient system performance.'
+    title: "Furnace Filter Cleaning",
+    description: "Cleaning furnace filters preserves indoor air quality.",
+    before: null, // missing
+    after: null   // missing
   }
 ];
+
 
 export const stepsData = [
   {
