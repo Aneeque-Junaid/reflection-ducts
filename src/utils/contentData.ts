@@ -39,44 +39,85 @@ export const reviews = [
   }
 ]
 
-export const galleryItems = [
-  {
-    title: "Furnace Cleaning",
-    description: "Cleaning the furnace is vital for maintaining a safe and efficient heating system.",
-    before: "/images/FurnaceBefore.jpeg",
-    after: "/images/FurnaceAfter.jpeg"
-  },
-  {
-    title: "Dryer Vent Cleaning",
-    description: "Dryer vent cleaning ensures proper airflow and efficiency.",
-    before: "/images/DryerVentBefore.jpeg",
-    after: "/images/DryerVentAfter.jpeg"
-  },
-  {
-    title: "Blower Motor Cleaning",
-    description: "Blower motor cleaning improves HVAC efficiency.",
-    before: "/images/FurnaceBlowerBefore.jpeg",
-    after: "/images/FurnaceBlowerAfter.jpeg"
-  },
-  {
-    title: "Register and Return Vents",
-    description: "Ensures efficient airflow throughout the HVAC system.",
-    before: "/images/VentsBefore.jpeg",
-    after: "/images/VentsAfter.jpeg"
-  },
-  {
-    title: "Duct Deep + Brushing Cleaning",
-    description: "Deep brushing removes dust, debris, and allergens.",
-    before: "/images/DuctBefore.jpeg",
-    after: "/images/DuctAfter.jpeg"
-  },
-  {
-    title: "Furnace Filter Cleaning",
-    description: "Cleaning furnace filters preserves indoor air quality.",
-    before: null, // missing
-    after: null   // missing
-  }
-];
+export const GalleryItems = {
+  Ontario: [
+    {
+      title: "Furnace Cleaning",
+      description: "Cleaning the furnace is vital for maintaining a safe and efficient heating system.",
+      before: "/images/FurnaceCleaningBefore.jpeg",
+      after: "/images/FurnaceCleaningAfter.jpg"
+    },
+    {
+      title: "Dryer Vent Cleaning",
+      description: "Dryer vent cleaning ensures proper airflow and efficiency.",
+      before: "/images/DryerBeforeOntario.jpeg",
+      after: "/images/DryerAfterOntario.jpeg"
+    },
+    {
+      title: "Blower Motor Cleaning",
+      description: "Blower motor cleaning improves HVAC efficiency.",
+      before: "/images/FurnaceBlowerBefore.jpeg",
+      after: "/images/FurnaceBlowerAfter.jpeg"
+    },
+    {
+      title: "Register and Return Vents",
+      description: "Ensures efficient airflow throughout the HVAC system.",
+      before: "/images/VentsBefore.jpeg",
+      after: "/images/VentsAfter.jpeg"
+    },
+    {
+      title: "Duct Deep + Brushing Cleaning",
+      description: "Deep brushing removes dust, debris, and allergens.",
+      before: "/images/DuctBefore.jpeg",
+      after: "/images/DuctAfter.jpeg"
+    },
+    {
+      title: "Furnace Filter Cleaning",
+      description: "Cleaning furnace filters preserves indoor air quality.",
+      before: "/images/FilterBeforeOntario.jpeg",
+      after: "/images/FilterAfterOntario.jpeg"
+    }
+  ],
+
+  Alberta: [
+    {
+      title: "Furnace Cleaning",
+      description: "Cleaning the furnace is vital for maintaining a safe and efficient heating system.",
+      before: "/images/FurnaceCleaningBefore.jpeg",
+      after: "/images/FurnaceCleaningAfter.jpg"
+    },
+    {
+      title: "Dryer Vent Cleaning",
+      description: "Dryer vent cleaning ensures proper airflow and efficiency.",
+      before: "/images/DryerBeforeAlberta.jpeg",
+      after: "/images/DryerAfterAlberta.jpeg"
+    },
+    {
+      title: "Blower Motor Cleaning",
+      description: "Blower motor cleaning improves HVAC efficiency.",
+      before: "/images/FurnaceBlowerBefore.jpeg",
+      after: "/images/FurnaceBlowerAfter.jpeg"
+    },
+    {
+      title: "Register and Return Vents",
+      description: "Ensures efficient airflow throughout the HVAC system.",
+      before: "/images/VentsBefore.jpeg",
+      after: "/images/VentsAfter.jpeg"
+    },
+    {
+      title: "Duct Deep + Brushing Cleaning",
+      description: "Deep brushing removes dust, debris, and allergens.",
+      before: "/images/DuctBefore.jpeg",
+      after: "/images/DuctAfter.jpeg"
+    },
+    {
+      title: "Furnace Filter Cleaning",
+      description: "Cleaning furnace filters preserves indoor air quality.",
+      before: "/images/FilterBeforeAlberta.jpeg",
+      after: "/images/FilterAfterAlberta.jpeg"
+    }
+  ]
+}
 
 
 export const stepsData = [

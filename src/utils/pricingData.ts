@@ -173,6 +173,7 @@ export const Deals = {
       dealTitle: "Essential Package",
       services: ["Unlimited Ducts", "Unlimited Vents", "Dryer Vent Cleaning"],
       price: "$165",
+      savings: "Save $30",
     },
     {
       dealTitle: "Comfort Package",
@@ -184,6 +185,7 @@ export const Deals = {
         "Dryer Vent Cleaning",
       ],
       price: "$219",
+      savings: "Save $50",
     },
     {
       dealTitle: "Advanced Package",
@@ -196,6 +198,7 @@ export const Deals = {
         "Return Line Cleaning",
       ],
       price: "$249",
+      savings: "Save $75",
     },
     {
       dealTitle: "Elite Package",
@@ -209,6 +212,7 @@ export const Deals = {
         "Brushing Service",
       ],
       price: "$349",
+      savings: "Save $100",
       popular: true,
     },
     {
@@ -224,6 +228,7 @@ export const Deals = {
         "AC Coil Cleaning",
       ],
       price: "$399",
+      savings: "Save $130",
     },
   ],
 };

@@ -121,10 +121,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Camera, ChevronLeft, ChevronRight } from 'lucide-vue-next'
-import { galleryItems } from '@/utils/contentData'
+import { GalleryItems } from '@/utils/contentData'
+import { useRegionStore } from '@/store/regionStore'
 
+const regionStore = useRegionStore()
+const galleryItems = computed(() => GalleryItems[regionStore.region])
 const activeIndices = ref(Array(6).fill(0)) // 0 = before, 1 = after
 
 
