@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between py-4">
         <!-- Logo -->
         <div class="flex items-center">
-          <a href="#top" class="flex items-center">
+          <a href="/" class="flex items-center">
             <div class="bg-white text-slate-800 px-4 py-2 rounded-lg font-bold text-xl">
               REFLECTION DUCTS
             </div>

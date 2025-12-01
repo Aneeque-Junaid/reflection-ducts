@@ -119,6 +119,19 @@
             >
               Terms & Conditions
             </router-link>
+            <router-link 
+              to="/booking-terms"
+              class="text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              Booking Terms
+            </router-link>
+
+            <router-link 
+              to="/lead-form-disclosure"
+              class="text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              Lead Form Disclosure
+            </router-link>
           </div>
         </div>
       </div>

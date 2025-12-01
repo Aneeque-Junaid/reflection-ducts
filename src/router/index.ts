@@ -19,6 +19,16 @@ const router = createRouter({
       name: 'terms',
       component: () => import('../components/TermsView.vue'),
     },
+    {
+      path: '/booking-terms',
+      name: 'booking-terms',
+      component: () => import('../components/BookingTermsView.vue'),
+    },
+    {
+      path: '/lead-form-disclosure',
+      name: 'lead-form-disclosure',
+      component: () => import('../components/LeadFormDisclosureView.vue'),
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
