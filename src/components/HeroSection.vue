@@ -10,16 +10,16 @@
         <div class="max-w-4xl mx-auto text-center">
           <!-- Main Headline -->
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Professional Duct Cleaning –
-            <span class="text-secondary-400">Fast, Clean & Reliable</span>
+            Breathe Cleaner Air, Professional Duct Cleaning You Can Trust.
+            <!-- <span class="text-secondary-400">Fast, Clean & Reliable</span> -->
           </h1>
           
           <!-- Subheadline -->
-          <p class="text-xl md:text-2xl text-gray-300 mb-8">
+          <!-- <p class="text-xl md:text-2xl text-gray-300 mb-8">
             Serving Ontario & Alberta
-          </p>
+          </p> -->
           <p class="text-xl md:text-2xl text-gray-300 mb-8">
-            ReflectionDucts specialize in your Indoor Air Quality. Removing dust, mold, pet dander, allergens.
+            Improve indoor air quality, reduce allergens, and boost HVAC efficiency with certified duct cleaning specialists. Serving homes across Ontario & Alberta.
           </p>
           
           <!-- Features -->

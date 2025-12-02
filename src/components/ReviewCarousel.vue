@@ -54,7 +54,12 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 import ReviewCard from '@/components/ReviewCard.vue'
-import { reviews } from '@/utils/contentData'
+import { Reviews } from '@/utils/contentData'
+import { useRegionStore } from '@/store/regionStore'
+
+
+const regionStore = useRegionStore()
+const reviews = computed(() => Reviews[regionStore.region])
 
 const currentIndex = ref(0)
 const screenWidth = ref(window.innerWidth)
@@ -68,12 +73,12 @@ const itemsPerView = computed(() => {
 
 // Duplicate reviews for infinite loop
 const duplicatedReviews = computed(() => {
-  return [...reviews, ...reviews, ...reviews]
+  return [...reviews.value, ...reviews.value, ...reviews.value]
 })
 
 // Calculate which review is actually active (for dots)
 const activeIndex = computed(() => {
-  return currentIndex.value % reviews.length
+  return currentIndex.value % reviews.value.length
 })
 
 const next = () => {
@@ -82,10 +87,10 @@ const next = () => {
   currentIndex.value++
   
   // When we reach the end of the second set, reset to the start of the second set
-  if (currentIndex.value >= reviews.length * 2) {
+  if (currentIndex.value >= reviews.value.length * 2) {
     setTimeout(() => {
       isTransitioning.value = false
-      currentIndex.value = reviews.length
+      currentIndex.value = reviews.value.length
       setTimeout(() => {
         isTransitioning.value = true
       }, 50)
@@ -99,10 +104,10 @@ const prev = () => {
   currentIndex.value--
   
   // When we reach the start of the second set, reset to the end of the second set
-  if (currentIndex.value < reviews.length) {
+  if (currentIndex.value < reviews.value.length) {
     setTimeout(() => {
       isTransitioning.value = false
-      currentIndex.value = reviews.length * 2 - 1
+      currentIndex.value = reviews.value.length * 2 - 1
       setTimeout(() => {
         isTransitioning.value = true
       }, 50)
@@ -111,7 +116,7 @@ const prev = () => {
 }
 
 const goToSlide = (index: number) => {
-  currentIndex.value = reviews.length + index
+  currentIndex.value = reviews.value.length + index
 }
 
 const handleResize = () => {
@@ -121,7 +126,7 @@ const handleResize = () => {
 onMounted(() => {
   window.addEventListener('resize', handleResize)
   // Start at the middle set for seamless looping
-  currentIndex.value = reviews.length
+  currentIndex.value = reviews.value.length
 })
 
 onUnmounted(() => {

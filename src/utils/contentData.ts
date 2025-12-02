@@ -1,43 +1,72 @@
 import { Search, Wrench, CheckCircle, Sparkles } from "lucide-vue-next";
 
-export const reviews = [
-  {
-    name: 'Sarah Johnson',
-    location: 'Toronto, ON',
-    rating: 5,
-    text: 'Absolutely amazing service! The team was professional, punctual, and thorough. My home\'s air quality has improved dramatically since the duct cleaning. Highly recommend Reflection Ducts!'
-  },
-  {
-    name: 'Mike Chen',
-    location: 'Calgary, AB',
-    rating: 5,
-    text: 'I was impressed by the attention to detail and the before/after photos they showed me. The difference in my HVAC system\'s efficiency is noticeable. Great value for money!'
-  },
-  {
-    name: 'Jennifer Smith',
-    location: 'Mississauga, ON',
-    rating: 4,
-    text: 'Professional service from start to finish. They explained everything they were doing and left my home cleaner than when they arrived. The air feels so much fresher now!'
-  },
-  {
-    name: 'David Wilson',
-    location: 'Brampton, ON',
-    rating: 5,
-    text: 'Fast, reliable, and reasonably priced. The technicians were knowledgeable and answered all my questions. I\'ll definitely be using their services again in the future.'
-  },
-  {
-    name: 'Lisa Rodriguez',
-    location: 'Oakville, ON',
-    rating: 5,
-    text: 'Excellent customer service and quality work. They were able to schedule me in quickly and completed the job efficiently. My allergies have improved significantly!'
-  },
-  {
-    name: 'Robert Taylor',
-    location: 'Vaughan, ON',
-    rating: 4,
-    text: 'I\'ve used several duct cleaning services over the years, but Reflection Ducts is by far the best. Thorough, professional, and honest. You won\'t be disappointed!'
-  }
-]
+export const Reviews = {
+  Ontario: [
+    {
+      name: "Sarah M.",
+      location: "Toronto, ON",
+      rating: 5,
+      text: "I booked Reflection Duct for a full duct cleaning before winter, and I couldn’t be happier. The technician arrived on time, was very professional, and explained everything clearly. My home feels so much fresher, and I can actually breathe better!"
+    },
+    {
+      name: "Daniel Criston",
+      location: "Mississauga, ON",
+      rating: 4,
+      text: "Good experience overall. The team was friendly and worked efficiently. Only issue was a small delay in confirming the appointment, but the service itself was great."
+    },
+    {
+      name: "Priya K.",
+      location: "Ottawa, ON",
+      rating: 5,
+      text: "Amazing service! Didn’t realize how dirty our ducts were before. Proper equipment, professional team, and great tips for maintaining clean air."
+    },
+    {
+      name: "Michael Roger",
+      location: "Hamilton, ON",
+      rating: 3,
+      text: "Service was okay. Team was polite, but pricing felt a bit higher compared to other quotes."
+    },
+    {
+      name: "Emily",
+      location: "London, ON",
+      rating: 5,
+      text: "Highly professional. They arrived on time, worked quietly, and left no mess. My allergies have improved noticeably."
+    }
+  ],
+
+  Alberta: [
+    {
+      name: "Jason Hardt",
+      location: "Calgary, AB",
+      rating: 5,
+      text: "Fantastic job! The team was on time, professional, and thorough. Air quality improved instantly."
+    },
+    {
+      name: "Lauren Hampton",
+      location: "Edmonton, AB",
+      rating: 4,
+      text: "Good service. Quick and friendly staff. Appointment scheduling took a bit longer, but overall very solid work."
+    },
+    {
+      name: "Kevin Butcher",
+      location: "Calgary, AB",
+      rating: 3,
+      text: "Cleaning was okay but expected more detail. Pricing felt slightly high, though the team was polite."
+    },
+    {
+      name: "Aisha R.",
+      location: "Edmonton, AB",
+      rating: 5,
+      text: "Excellent experience! They explained the whole process and left everything spotless. AC airflow improved a lot."
+    },
+    {
+      name: "Brad Sid",
+      location: "Calgary, AB",
+      rating: 4,
+      text: "Professional and friendly technicians. Ducts are noticeably cleaner. Slight delay in appointment confirmation."
+    }
+  ]
+}
 
 export const GalleryItems = {
   Ontario: [
