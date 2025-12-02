@@ -4,12 +4,17 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Company Info -->
         <div class="lg:col-span-2">
-          <div class="bg-white text-slate-800 px-4 py-2 rounded-lg font-bold text-xl inline-block mb-4">
-            REFLECTION DUCTS
+          <div class="flex items-center">
+            <a href="/" class="flex items-center">
+              <img 
+                src="../../public/logo/logo.png" 
+                alt="Reflection Ducts Logo" 
+                class="h-12 w-auto object-contain"
+              />
+            </a>
           </div>
           <p class="text-gray-300 mb-4">
-            Professional duct cleaning services serving Canada – Ontario, Calgary & Beyond. 
-            Licensed, insured, and committed to providing clean air for your home and business.
+            At Reflection Ducts, we take pride in delivering reliable, high-quality duct cleaning services you can trust. Whether you’re in Ontario, Alberta, or beyond, our licensed and insured team is committed to ensuring your home or business enjoys cleaner, healthier air. Thank you for choosing us, your comfort and safety always come first.
           </p>
           <div class="flex items-center space-x-4">
             <a 
