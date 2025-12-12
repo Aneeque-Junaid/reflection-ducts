@@ -149,17 +149,29 @@
               ></textarea>
             </div>
             
-            <button
-              type="submit"
-              :disabled="isSubmittingQuick"
-              class="w-full btn-primary py-3 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <span v-if="!isSubmittingQuick">Send Message</span>
-              <span v-else class="flex items-center justify-center">
-                <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                Sending...
-              </span>
-            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                
+                <!-- WhatsApp -->
+                <button
+                  type="button"
+                  @click="sendQuickWhatsapp"
+                  :disabled="isSubmittingQuick"
+                  class="w-full btn-whatsapp py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Send via WhatsApp
+                </button>
+
+                <!-- SMS -->
+                <button
+                  type="button"
+                  @click="sendQuickSMS"
+                  :disabled="isSubmittingQuick"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Send via SMS
+                </button>
+
+              </div>
           </form>
           
           <div v-if="showQuickSuccess" class="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg text-sm">
@@ -203,28 +215,69 @@ const quickForm = reactive({
 const isSubmittingQuick = ref(false)
 const showQuickSuccess = ref(false)
 
-const submitQuickContact = async () => {
+const QUICK_WHATSAPP_NUMBER = "12264552415"
+const QUICK_SMS_NUMBER = "12264552415"
+
+const buildQuickWhatsappMessage = () => `
+  *New Quick Contact Message*
+
+  *Name:* ${quickForm.name}
+  *Phone:* ${quickForm.phone}
+
+  *Message:*
+  ${quickForm.message}
+  `
+
+const buildQuickPlainMessage = () => `
+  New Quick Contact Message
+
+  Name: ${quickForm.name}
+  Phone: ${quickForm.phone}
+
+  Message:
+  ${quickForm.message}
+  `
+
+const sendQuickWhatsapp = () => {
+  if (!quickForm.name.trim() || !quickForm.phone.trim() || !quickForm.message.trim()) return
+
   isSubmittingQuick.value = true
-  
   try {
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    // Reset form
-    Object.keys(quickForm).forEach(key => {
-      quickForm[key as keyof typeof quickForm] = ''
-    })
-    
-    showQuickSuccess.value = true
-    setTimeout(() => {
-      showQuickSuccess.value = false
-    }, 5000)
-    
-  } catch (error) {
-    console.error('Quick contact form error:', error)
+    const msg = buildQuickWhatsappMessage()
+    const encoded = encodeURIComponent(msg)
+    const url = `https://wa.me/${QUICK_WHATSAPP_NUMBER}?text=${encoded}`
+    window.open(url, "_blank")
+
+    resetQuickForm()
   } finally {
     isSubmittingQuick.value = false
   }
 }
+
+const sendQuickSMS = () => {
+  if (!quickForm.name.trim() || !quickForm.phone.trim() || !quickForm.message.trim()) return
+
+  isSubmittingQuick.value = true
+  try {
+    const msg = buildQuickPlainMessage()
+    const encoded = encodeURIComponent(msg)
+    const url = `sms:${QUICK_SMS_NUMBER}?&body=${encoded}`
+
+    window.location.href = url
+
+    resetQuickForm()
+  } finally {
+    isSubmittingQuick.value = false
+  }
+}
+
+const resetQuickForm = () => {
+  Object.keys(quickForm).forEach(key => {
+    quickForm[key as keyof typeof quickForm] = ''
+  })
+  showQuickSuccess.value = true
+  setTimeout(() => (showQuickSuccess.value = false), 5000)
+}
+
 </script>
 
