@@ -1,4 +1,3 @@
-<!-- components/RegionSelector.vue -->
 <template>
   <div class="fixed inset-0 bg-black/50 flex items-center justify-center">
     <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center space-y-4">
@@ -28,6 +27,6 @@ import { useRegionStore } from "@/store/regionStore";
 const regionStore = useRegionStore();
 
 function set(value) {
-  regionStore.setRegion(value);
+  regionStore.setRegion(value, true);
 }
 </script>

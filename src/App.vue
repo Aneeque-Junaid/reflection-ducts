@@ -2,13 +2,14 @@
   <div id="app" class="min-h-screen bg-gray-50 relative">
 
     <AppHeader />
+    <HeroSection />
     <main>
-      <router-view />
+      <router-view v-if="initialized"/>
     </main>
     <AppFooter />
     <WhatsAppFloat />
 
-    <RegionSelector v-if="!regionStore.region" class="region-modal" />
+    <RegionSelector v-if="!region" class="region-modal" />
 
   </div>
 </template>
@@ -18,9 +19,13 @@ import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import WhatsAppFloat from './components/WhatsAppFloat.vue'
 import RegionSelector from './components/RegionSelector.vue'
+import HeroSection from './components/HeroSection.vue';
 import { useRegionStore } from "@/store/regionStore";
+import { storeToRefs } from 'pinia'
 
-const regionStore = useRegionStore();
+
+const { region, initialized } = storeToRefs(useRegionStore());
+
 </script>
 
 <style>

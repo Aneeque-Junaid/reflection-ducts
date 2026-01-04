@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- Hero Section -->
-    <HeroSection />
-    
     <!-- Lead Form Section -->
     <LeadForm ref="leadFormRef" />
     
@@ -28,7 +25,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import HeroSection from '../components/HeroSection.vue'
 import LeadForm from '../components/LeadForm.vue'
 import ServiceProcess from '../components/ServiceProcess.vue'
 import PricingOffers from '../components/PricingOffers.vue'
